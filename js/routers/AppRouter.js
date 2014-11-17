@@ -4,7 +4,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         "":                         "home",
         "employees/:id":            "employeeDetails",
         "employees/:id/reports":    "reports",
-        "employees/:id/map":        "map"
+        "map":                      "map"
     },
 
     initialize: function () {
@@ -22,6 +22,7 @@ app.routers.AppRouter = Backbone.Router.extend({
             app.homeView.delegateEvents(); // delegate events when the view is recycled
         }
         app.slider.slidePage(app.homeView.$el);
+        console.log("homeview has been called!");
     },
 
     employeeDetails: function (id) {
@@ -31,6 +32,7 @@ app.routers.AppRouter = Backbone.Router.extend({
                 // Note that we could also 'recycle' the same instance of EmployeeFullView
                 // instead of creating new instances
                 app.slider.slidePage(new app.views.EmployeeView({model: data}).render().$el);
+                console.log("the detail route has been triggered!");
             }
         });
     },
@@ -46,8 +48,11 @@ app.routers.AppRouter = Backbone.Router.extend({
         });
     },
 
-    map: function (id) {
+    map: function () {
+        // var map = new app.views.MapView();
+        
         app.slider.slidePage(new app.views.MapView().render().$el);
+        console.log("homeview has been called!");
     }
 
 });

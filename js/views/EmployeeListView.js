@@ -29,6 +29,7 @@ app.views.EmployeeListItemView = Backbone.View.extend({
 
     initialize:function () {
         this.model.on("change", this.render, this);
+        // getting rid of zambie views
         this.model.on("destroy", this.close, this);
     },
 

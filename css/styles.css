@@ -73,7 +73,7 @@ a {
     position: relative;
     text-align: left;
     clear: both;
-    padding: 12px 60px 16px 8px !important;
+    /*padding: 12px 60px 16px 8px !important;*/
 }
 
 .list > li p:nth-of-type(1) {
@@ -190,4 +190,23 @@ ul {
     right: 0;
     bottom: 0;
     overflow: hidden;
+}
+
+.map-container {
+    width: 100%;
+    min-height: 300px;
+    height: 300px;
+    padding: 0 !important;
+}
+
+.maplist-container {
+    width: 100%;
+    min-height: 300px;
+    height: 100%;
+    padding: 0 !important;
+}
+
+
+.header-lineheight {
+    line-height: 3rem
 }

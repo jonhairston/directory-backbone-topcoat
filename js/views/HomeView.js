@@ -3,6 +3,7 @@ app.views.HomeView = Backbone.View.extend({
     initialize: function () {
         this.searchResults = new app.models.EmployeeCollection();
         this.searchresultsView = new app.views.EmployeeListView({model: this.searchResults});
+        this.searchResults.fetch({reset: true});
     },
 
     render: function () {
