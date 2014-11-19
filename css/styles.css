@@ -538,6 +538,10 @@ p {
     font-size: 14px;
     color: #777;
 }
+
+.margin-top-5 {
+    margin-top: 5px;
+}
 /* end detail view*/
 body {
     background: white;
