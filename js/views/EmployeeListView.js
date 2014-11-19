@@ -2,7 +2,7 @@ app.views.EmployeeListView = Backbone.View.extend({
 
     tagName:'ul',
 
-    attributes: {class: 'topcoat-list list'},
+    attributes: {class: 'topcoat-list list border-bottom-1'},
 
     initialize:function () {
         var self = this;
@@ -25,7 +25,7 @@ app.views.EmployeeListItemView = Backbone.View.extend({
 
     tagName:"li",
 
-    className:"topcoat-list__item",
+    className:"topcoat-list__item nopadding no-border-bottom white-background list-text-color",
 
     initialize:function () {
         this.model.on("change", this.render, this);

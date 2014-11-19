@@ -1,6 +1,19 @@
-<a href="#employees/<%= id %>">
-    <img src='pics/amy_jones.jpg'/>
-    <p><%= id %></p>
-    <p><%= summary %></p>
-    <span class="chevron"></span><span class="count"><%= region %></span>
+<a href="#alerts/<%= id %>">
+    <div class="<%= category.name %>__bg <%= category.name %>-l__bg">
+        <div class="media-object__container">
+    	    <div class="<%= category.name %> <%= category.name %>__center"></div>
+    		<h2 class="mbsc-lv-ios7"> <%= category.name %></h2>
+        </div>
+	</div>
+    <div class="img-border-left">
+        <div class="media-body .mbsc-lv-ios7"> 
+            <p><%= summary %></p>
+        </div>
+        
+        <span class="chevron"></span><span class="count"></span>
+        
+        <div class="media-object__postdate">
+        	<%= modified_at %>
+        </div>
+    </div>
 </a>

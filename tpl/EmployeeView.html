@@ -1,37 +1,37 @@
-<div class="topcoat-navigation-bar">   
-    <div class="topcoat-navigation-bar__item left quarter">
+<div class="topcoat-navigation-bar bar-color">   
+    <div class="topcoat-navigation-bar__item left quarter bar-color">
         <a class="topcoat-icon-button--quiet back-button" href="#">
-          <span class="topcoat-icon topcoat-icon--back"></span>
+          <span class="topcoat-icon topcoat-icon--back margin-top-11"></span>
         </a>
     </div>
-    <div class="topcoat-navigation-bar__item center half">
-        <h1 class="topcoat-navigation-bar__title">Details</h1>
 
-
+    <div class="topcoat-navigation-bar__item center half bar-color">
+        <h1 class="topcoat-navigation-bar__title header-lineheight margin-top-11">Details</h1>
     </div>
 </div>
 
 <div class='details'>
+    <div class="<%= category.name %>__bg <%= category.name %>-d__bg">
+        <div class="detail-cat__icon">
+            <span class="<%= category.name %>"></span>
+        </div>
 
-    <img class='employee-image' src='pics/amy_jones.jpg'/>
+        <div class="detail-cat__subject nopadding subject">
+            <h4><%= subject %></h4>
+        </div>
+    </div>
+
     <h1><%= subject %></h1>
     <span class="location"></span>
-    <div class="topcoat-list__container scroller">
+    <div class="topcoat-list__container scroller top-129 white-background">
         <ul class="topcoat-list list actions">
             <li>
                 <div id="single-map" class="map map-container"></div>
             </li>
 
-            <li class="topcoat-list__item">
+            <li class="topcoat-list__item no-border-bottom">
                 <p><%= information %></p>
             </li>
-
-            <li class="topcoat-list__item"><a href="#map">
-                <p>Location</p><p></p><div class="action-icon icon-location"></div></a>
-            </li>
-
-
-
         </ul>
     </div>
 </div>

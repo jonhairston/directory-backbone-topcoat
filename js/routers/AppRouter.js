@@ -2,8 +2,8 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
         "":                         "home",
-        "employees/:id":            "employeeDetails",
-        "employees/:id/reports":    "reports",
+        "alerts/:id":            "alertDetails",
+        "alerts/:id/reports":    "reports",
         "map":                      "map"
     },
 
@@ -25,7 +25,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         console.log("homeview has been called!");
     },
 
-    employeeDetails: function (id) {
+    alertDetails: function (id) {
         var employee = new app.models.Employee({id: id});
         employee.fetch({
             success: function (data) {

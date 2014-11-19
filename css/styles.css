@@ -1,12 +1,8 @@
-.topcoat-navigation-bar {
-    z-index: 10;
-}
-
 .scroller {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     position: absolute;
-    top: 168px;
+    top: 86px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -79,7 +75,6 @@ a {
 .list > li p:nth-of-type(1) {
     margin: 0px;
     padding-top: 4px;
-    font-weight: bold;
 }
 
 .list > li p:nth-of-type(2) {
@@ -203,10 +198,353 @@ ul {
     width: 100%;
     min-height: 300px;
     height: 100%;
-    padding: 0 !important;
+    padding: 0;
+    top: 87px;
 }
 
 
 .header-lineheight {
-    line-height: 3rem
+    line-height: 2.5rem;
+    color: #fff;
+}
+
+/* This is the section for the images */
+.media-object__container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-right: 1px solid #ebebeb;
+
+}
+
+.Traffic__bg {
+  background-color: #76b3d3;
+  color: white;
+}
+
+.Health__bg {
+  background-color: white;
+  color: #363636;
+}
+
+.Fire__bg {
+  background-color: #c65c5c;
+  color: white;
+}
+
+.School__bg {
+  background-color: #4f5d73;
+  color: white;
+}
+
+.Utilities__bg {
+  background-color: #76c2ae;
+  color: white;
+}
+
+.Other__bg {
+  background-color: #c65c5c;
+  color: white;
+}
+
+.Police__bg {
+  background-color: #4f5d73;
+  color: white;
+}
+
+div[class$='-l__bg'] {
+  width: 25%;
+  position: relative;
+  display: inline-block;
+}
+
+div[class$='-d__bg'] {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  height: auto;
+  min-height: 80px;
+  margin-bottom: -5px;
+}
+
+div[class$='__center'] {
+  margin: 10px auto;
+}
+
+
+.health, .Health {
+  background: url("../img/sprites.png") no-repeat -7px -12px;
+  width: 35px;
+  height: 32px;
+}
+
+.fire, .Fire {
+  background: url("../img/sprites.png") no-repeat -9px -56px;
+  width: 31px;
+  height: 38px;
+}
+
+.school, .School {
+  background: url("../img/sprites.png") no-repeat -6px -115px;
+  width: 41px;
+  height: 24px;
+}
+
+.traffic, .Traffic {
+  background: url("../img/sprites.png") no-repeat -66px -11px;
+  width: 16px;
+  height: 32px;
+}
+
+.utilities, .Utilities {
+  background: url("../img/sprites.png") no-repeat -58px -58px;
+  width: 35px;
+  height: 36px;
+}
+
+.other, .Other {
+  background: url("../img/sprites.png") no-repeat -58px -107px;
+  width: 37px;
+  height: 35px;
+}
+
+.police, .Police {
+  background: url("../img/sprites.png") no-repeat -110px -8px;
+  width: 32px;
+  height: 37px;
+}
+
+.tower {
+  background: url("../img/sprites.png") no-repeat -100px -50px;
+  width: 20px;
+  height: 20px;
+}
+/* end image section*/
+
+/* list item*/
+h2 {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mbsc-lv-ios7 {
+  font-family: arial,verdana,sans-serif;
+}
+
+
+.media-object__postdate {
+  color: #777;
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 25.25%;
+  width: 100%;
+      margin-bottom: 3px;
+}
+
+.media-body {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  padding: 5px;
+  width: 100%;
+}
+
+.nopadding {
+    padding: 0;
+}
+/* end list item*/
+
+/* detail view */
+.no-border-bottom {
+    border-bottom: 0px;
+}
+.detail-cat__icon {
+  width: 15%;
+  position: absolute;
+}
+.detail-cat__icon span {
+  display: block;
+}
+
+.detail-cat__subject {
+  width: 85%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+}
+.detail-cat__subject h4 {
+  font-size: 16px;
+
+  padding-left: 20px;
+}
+/* end detail view */
+
+/* Header bar*/
+
+.bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  height: 48px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: white;
+  border-bottom: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bar-color {
+    background: rgba(77, 99, 112, 1);
+
+}
+
+
+.topcoat-navigation-bar {
+    z-index: 10;
+    overflow: visible;
+}
+
+.segmented-control {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.segmented-control .control-item {
+  display: table-cell;
+  width: 1%;
+  padding-top: 6px;
+  padding-bottom: 7px;
+  overflow: hidden;
+  line-height: 1;
+  color: #333;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-left: 1px solid #ccc;
+}
+.segmented-control .control-item:first-child {
+  border-left-width: 0;
+}
+.segmented-control .control-item:active {
+  background-color: #eee;
+}
+.segmented-control .control-item.active {
+  background-color: #ccc;
+}
+
+.segmented-control-primary {
+  border-color: white;
+}
+.segmented-control-primary .control-item {
+  color: white;
+  border-color: inherit;
+}
+.segmented-control-primary .control-item:active {
+  background-color: white;
+}
+.segmented-control-primary .control-item.active {
+  color: #fff;
+  background-color: white;
+}
+
+.segmented-control-positive {
+  border-color: #5cb85c;
+}
+.segmented-control-positive .control-item {
+  color: #5cb85c;
+  border-color: inherit;
+}
+.segmented-control-positive .control-item:active {
+  background-color: #d8eed8;
+}
+.segmented-control-positive .control-item.active {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+.segmented-control-negative {
+  border-color: #d9534f;
+}
+.segmented-control-negative .control-item {
+  color: #d9534f;
+  border-color: inherit;
+}
+.segmented-control-negative .control-item:active {
+  background-color: #f9e2e2;
+}
+.segmented-control-negative .control-item.active {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+.control-content {
+  display: none;
+}
+.control-content.active {
+  display: block;
+}
+
+.margin-top-11 {
+    margin-top: 11px;
+}
+/* end header bar*/
+
+/* list items*/
+.white-background {
+    background: white;
+    border-top: 1px solid #d6d6d6;
+}
+
+.img-border-right {
+    border-right: 1px solid #afafaf;
+}
+
+.list-text-color {
+    color: #787878;
+}
+
+.border-bottom-1 {
+    border-bottom: 1px solid #d6d6d6;
+}
+/* end list items*/
+
+/* detail view */
+.top-129 {
+    top: 129px;
+}
+
+.subject {
+    text-align: center;
+    right: 8%;
+    line-height: 0;
+}
+
+p {
+    font-size: 14px;
+    color: #777;
+}
+/* end detail view*/
+body {
+    background: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.whitesmoke {
+    background: whitesmoke;
 }

@@ -13,6 +13,8 @@ app.views.EmployeeView = Backbone.View.extend({
 
         } // end if
         return this;
+
+        this.model.on('destroy', this.close, this);
     },
 
     render: function () {
@@ -68,6 +70,12 @@ app.views.EmployeeView = Backbone.View.extend({
 
     events: {
         "click .back-button": "back"
+    },
+
+    onClose: function () {
+        console.log("help ive been killed!");
+        this.unbind();
+        this.remove();
     },
 
     back: function(event) {
