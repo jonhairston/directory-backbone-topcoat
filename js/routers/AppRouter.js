@@ -1,10 +1,10 @@
 app.routers.AppRouter = Backbone.Router.extend({
 
     routes: {
-        "":                         "home",
+        "":                      "home",
         "alerts/:id":            "alertDetails",
         "alerts/:id/reports":    "reports",
-        "map":                      "map"
+        "map":                   "map"
     },
 
     initialize: function () {
@@ -52,7 +52,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         // var map = new app.views.MapView();
         
         app.slider.slidePage(new app.views.MapView().render().$el);
-        console.log("homeview has been called!");
+        console.log("mapview has been called!");
     }
 
 });

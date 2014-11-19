@@ -80,6 +80,18 @@ app.models.EmployeeCollection = Backbone.Collection.extend({
     url: function () {
         return "https://heads-up.herokuapp.com/api/app/v2/alerts/?region=1";
     },
+        comparator: function(model) {
+        // format the date while we're sorting (hack - logic should be moved to better function)
+        var originalTimestamp = model.get('modified_at'),
+            date = moment(originalTimestamp).format("llll");
+
+        // set the date on the model since we never PUT/POST back on this resource
+        model.set('modified_at', date, {
+            silent: true
+        });
+
+        return -date;
+    },
 
     sync: function(method, model, options) {
         var that = this;
@@ -96,6 +108,7 @@ app.models.EmployeeCollection = Backbone.Collection.extend({
             console.log("find by name called");
             findByName(options.data.name).done(function (data) {
                 options.success(data);
+
             });
         }
     }
