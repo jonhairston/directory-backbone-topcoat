@@ -3,12 +3,11 @@ app.routers.AppRouter = Backbone.Router.extend({
     routes: {
         "":                      "home",
         "alerts/:id":            "alertDetails",
-        "alerts/:id/reports":    "reports",
         "map":                   "map"
     },
 
     initialize: function () {
-        app.slider = new PageSlider($('body'));
+        app.slider = new PageSlider($('#app'));
 
     },
 
@@ -37,22 +36,18 @@ app.routers.AppRouter = Backbone.Router.extend({
         });
     },
 
-    reports: function (id) {
-        var employee = new app.models.Employee({id: id});
-        employee.fetch({
-            success: function (data) {
-                // Note that we could also 'recycle' the same instance of EmployeeFullView
-                // instead of creating new instances
-                app.slider.slidePage(new app.views.ReportsView({model: data}).render().$el);
-            }
-        });
-    },
-
     map: function () {
-        // var map = new app.views.MapView();
+        // if(!app.map){
+        app.map = new app.views.MapView();
+
+        app.slider.slidePage(app.map.render().$el);
+        // } else {
+            // app.slider.slidePage(app.map.render().$el);
+        // }
         
-        app.slider.slidePage(new app.views.MapView().render().$el);
         console.log("mapview has been called!");
+
+
     }
 
 });
